@@ -8,8 +8,8 @@ const Greeting = () => {
   const msg = useSelector((state) => state.greeting);
 
   async function fetchData() {
-    await axios.get('http://localhost:3000/api/message').then((res) => {
-      dispatch(fetchMessageSuccess(res.data.message));
+    await axios.get('http://localhost:3000/api/v1/cars').then((res) => {
+      dispatch(fetchMessageSuccess(res.data));
     });
   }
 
