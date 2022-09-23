@@ -1,0 +1,32 @@
+.car-card {
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-wrapper {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+}
+
+.cars-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 98vw;
+}
+
+.card-img {
+  width: 250px;
+}
