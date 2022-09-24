@@ -15,6 +15,7 @@ const Greeting = () => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   return (

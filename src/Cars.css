@@ -1,15 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+body {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .car-card {
-  border: 2px solid black;
-  width: 400px;
+  width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1em;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+.car-card:hover {
+  transform: scale(1.025);
+  cursor: pointer;
 }
 
 .main-wrapper {
-  border: 2px solid blue;
+  border: 5px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,16 +37,52 @@
   height: 99vh;
 }
 
+.main-wrapper h4 {
+  color: gray;
+}
+
 .cars-wrapper {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid red;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 70vh;
   width: 98vw;
 }
 
 .card-img {
   width: 250px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  margin: 0.5em;
+  border-radius: 50%;
+}
+
+.card-wrapper {
+  width: 350px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper .description {
+  border-top: 4px dashed gray;
+  width: 300px;
+  color: gray;
+  padding-top: 0.5em;
 }

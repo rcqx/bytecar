@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { fetchCarsSuccess } from '../redux/carsReducer';
 import CarCard from './CarCard';
-import '../Cars.css';
 
 const Cars = () => {
   const dispatch = useDispatch();
@@ -18,6 +17,7 @@ const Cars = () => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   carList.forEach((car) => carProps.push(
@@ -26,13 +26,14 @@ const Cars = () => {
       brand={car.brand}
       image={car.image}
       model={car.model}
+      description={car.description}
     />,
   ));
 
   return (
     <div className="main-wrapper">
       <h1>Latest Models</h1>
-      <h3>Please select an electric car model</h3>
+      <h4>Please select an electric car model</h4>
       <div className="cars-wrapper">
         {carProps}
       </div>
