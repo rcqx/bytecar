@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { fetchCarsSuccess } from '../redux/carsReducer';
 import CarCard from './CarCard';
@@ -21,13 +22,16 @@ const Cars = () => {
   }, []);
 
   carList.forEach((car) => carProps.push(
-    <CarCard
-      key={car.id}
-      brand={car.brand}
-      image={car.image}
-      model={car.model}
-      description={car.description}
-    />,
+    <Link key={car.id} to="/car_details">
+      <CarCard
+        key={car.id}
+        brand={car.brand}
+        image={car.image}
+        model={car.model}
+        description={car.description}
+      />
+      ,
+    </Link>,
   ));
 
   return (
