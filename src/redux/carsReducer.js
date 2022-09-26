@@ -1,5 +1,6 @@
 // action type
-const FETCH_CARS = 'carsReducer/FETCH_CARS';
+const FETCH_CARS = 'carsReducer/FETCH_CARS'
+const FETCH_CAR_DETAILS = 'carsReducer/FETCH_CAR_DETAILS'
 
 // initial state
 const initialState = [];
@@ -12,10 +13,27 @@ export function fetchCarsSuccess(data) {
   };
 }
 
+export function fetchCarDetailsSuccess(data) {
+  return {
+    type: FETCH_CAR_DETAILS,
+    payload: data,
+  };
+}
+
 // reducer
-export default function carsReducer(state = initialState, action) {
+export function carsReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_CARS:
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
+// reducer
+export function carDetailsReducer(state = initialState, action) {
+  switch (action.type) {
+    case FETCH_CAR_DETAILS:
       return action.payload;
     default:
       return state;

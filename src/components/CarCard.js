@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { FaFacebookSquare, FaTwitter, FaInstagramSquare } from 'react-icons/fa';
 
 const CarCard = ({
   brand,
@@ -20,11 +19,6 @@ const CarCard = ({
     </div>
     <div className="description">
       <p>{description}</p>
-    </div>
-    <div className="social-media">
-      <div className="logo-container"><FaFacebookSquare /></div>
-      <div className="logo-container"><FaTwitter /></div>
-      <div className="logo-container"><FaInstagramSquare /></div>
     </div>
   </div>
 );

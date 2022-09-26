@@ -86,3 +86,14 @@ a {
   color: gray;
   padding-top: 0.5em;
 }
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 99vh;
+  border: 3px solid blue;
+}
