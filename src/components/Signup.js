@@ -4,27 +4,29 @@ import axios from 'axios';
 const SignUp = () => {
   const [userName, setUserName] = useState('');
   const [userPassword, setUserPassword] = useState('');
-  const loginURL = 'http://localhost:3001/users';
+  const URL = 'http://localhost:3000/signup';
 
   const userSubmit = async (e) => {
     e.preventDefault();
-    axios.post(loginURL, {
-      name: userName,
-      password: userPassword,
-    })
+    axios.post(URL, JSON.stringify({
+      user: {
+        name: userName,
+        password: userPassword,
+      },
+    }))
       .then((response) => {
         if (response.status === 201) {
-          window.location.href = '/Rooms';
+          window.location.href = '/api/v1/cars';
         }
       });
   };
 
   return (
     <div className="signup-page">
-      <div>SignUp</div>
+      <div>Sign-Up</div>
       <form onSubmit={userSubmit}>
-        <input onChange={(e) => setUserName(e.target.value)} className="signInput" type="text" placeholder="User" required />
-        <input onChange={(e) => setUserPassword(e.target.value)} className="signInput" type="text" placeholder="Password" required />
+        <input onChange={(e) => setUserName(e.target.value)} className="signInput" type="text" placeholder="username" required />
+        <input onChange={(e) => setUserPassword(e.target.value)} className="signInput" type="text" placeholder="password" required />
         <button type="submit">Login</button>
       </form>
     </div>

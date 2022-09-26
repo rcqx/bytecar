@@ -7,6 +7,8 @@ import {
 import { Provider } from 'react-redux';
 import Greeting from './Greeting';
 import store from '../redux/configureStore';
+import Login from './Login';
+import SignUp from './Signup';
 
 const App = () => (
   <Provider store={store}>
