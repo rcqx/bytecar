@@ -5,14 +5,16 @@ import {
   Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Greeting from './Greeting';
+import Cars from './Cars';
+import CarDetails from './CarDetails';
 import store from '../redux/configureStore';
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Greeting />} />
+        <Route path="/cars" element={<Cars />} />
+        <Route path="/car_details" element={<CarDetails />} />
       </Routes>
     </BrowserRouter>
   </Provider>
