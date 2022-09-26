@@ -3,7 +3,7 @@
 // import axios from 'axios';
 
 const CarDetails = () => (
-  <h1>CarDetails</h1>
+  <h1 className="text-3xl font-bold underline">CarDetails</h1>
 );
 
 export default CarDetails;
