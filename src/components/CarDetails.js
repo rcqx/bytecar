@@ -9,9 +9,9 @@ const CarDetails = () => {
   return (
     <div className="main-details-wrapper w-full h-screen">
       <div className="details-wrapper">
-        <h1 className="text-3xl font-bold">{carDetails.brand}</h1>
+        <h1 className="text-blue-600 text-3xl font-bold">{carDetails.brand}</h1>
         <img className="card-img" src={carDetails.image} alt={carDetails.model} />
-        <h4 className="text-5xl">{carDetails.model}</h4>
+        <h4 className="text-blue-600 text-4xl">{carDetails.model}</h4>
       </div>
       <div className="right-side">
         <table>

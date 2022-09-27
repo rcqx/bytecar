@@ -98,9 +98,10 @@ a {
   flex-direction: column;
   width: 70%;
   margin-right: 2em;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
+  padding: 1.5em;
 }
 
 .details-wrapper img {
@@ -109,7 +110,6 @@ a {
   object-fit: cover;
   margin-top: 2em;
 }
-
 
 .main-details-wrapper table {
   width: 100%;
@@ -141,7 +141,7 @@ table > * {
 .config-button {
   display: flex;
   justify-content: space-around;
-  align-items:center
+  align-items: center;
 }
 
 .link-to-cars {
