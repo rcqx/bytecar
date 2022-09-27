@@ -86,3 +86,65 @@ a {
   color: gray;
   padding-top: 0.5em;
 }
+
+.main-details-wrapper {
+  display: flex;
+  border: 4px solid blue;
+  padding: 10em 8em 10em;
+  justify-content: center;
+}
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 2em;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
+  padding: 1.5em;
+}
+
+.details-wrapper img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 2em;
+}
+
+.main-details-wrapper table {
+  width: 100%;
+  height: 60%;
+  font-size: 1.2em;
+}
+
+table > * {
+  border-bottom: 1px solid gray;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.right-side {
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  padding: 1em;
+}
+
+.right-side button {
+  width: 50%;
+  height: 4em;
+}
+
+.config-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link-to-cars {
+  font-weight: bold;
+}
