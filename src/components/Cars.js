@@ -5,6 +5,7 @@ import axios from 'axios';
 import { FaFacebookSquare, FaTwitter, FaInstagramSquare } from 'react-icons/fa';
 import { fetchCarsSuccess } from '../redux/carsReducer';
 import CarCard from './CarCard';
+// import { fetchCarDetails } from '../redux/fetchCarDetails';
 
 const Cars = () => {
   const dispatch = useDispatch();
@@ -23,10 +24,11 @@ const Cars = () => {
   }, []);
 
   carList.forEach((car) => carProps.push(
-    <div className="card-wrapper">
+    <div key={car.id} className="card-wrapper">
       <Link key={car.id} to="/car_details">
         <CarCard
           key={car.id}
+          id={car.id}
           brand={car.brand}
           image={car.image}
           model={car.model}

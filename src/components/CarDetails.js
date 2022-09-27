@@ -1,22 +1,8 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
-import { fetchCarDetailsSuccess } from '../redux/carsReducer';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const CarDetails = () => {
-  const dispatch = useDispatch();
   const carDetails = useSelector((state) => state.car_details);
-
-  async function fetchData() {
-    await axios.get('http://localhost:3000/api/v1/cars/1').then((res) => {
-      dispatch(fetchCarDetailsSuccess(res.data));
-    });
-  }
-
-  useEffect(() => {
-    fetchData();
-    // eslint-disable-next-line
-  }, []);
 
   return (
     <div className="details-wrapper">

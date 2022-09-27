@@ -1,6 +1,6 @@
 // action type
-const FETCH_CARS = 'carsReducer/FETCH_CARS'
-const FETCH_CAR_DETAILS = 'carsReducer/FETCH_CAR_DETAILS'
+const FETCH_CARS = 'carsReducer/FETCH_CARS';
+const FETCH_CAR_DETAILS = 'carsReducer/FETCH_CAR_DETAILS';
 
 // initial state
 const initialState = [];

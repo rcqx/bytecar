@@ -1,15 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
 import greetingReducer from './greetingsReducer';
-import { carsReducer, carDetailsReducer } from './carsReducer';
+import { carsReducer } from './carsReducer';
+import { reducerDetails } from './fetchCarDetails';
 
 const store = configureStore(
   {
     reducer: {
       greeting: greetingReducer,
       cars: carsReducer,
-      car_details: carDetailsReducer,
+      car_details: reducerDetails,
     },
   },
 );
+
+store.subscribe(() => { store.getState(); });
 
 export default store;
