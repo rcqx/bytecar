@@ -7,6 +7,7 @@ import {
 import { Provider } from 'react-redux';
 import Cars from './Cars';
 import CarDetails from './CarDetails';
+import AddCar from './AddCar';
 import store from '../redux/configureStore';
 import Navbar from './Navbar';
 import '../App.css';
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/cars" element={<Cars />} />
           <Route path="/car_details" element={<CarDetails />} />
+          <Route path="/add_car" element={<AddCar />} />
         </Routes>
       </div>
     </BrowserRouter>
