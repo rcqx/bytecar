@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import greetingReducer from './greetingsReducer';
+import usersReducer from './users/users';
 
 const store = configureStore(
   {
     reducer: {
-      greeting: greetingReducer,
+      user: usersReducer,
     },
   },
 );
