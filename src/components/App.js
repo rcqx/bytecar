@@ -5,9 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import store from '../redux/configureStore';
 import Cars from './Cars';
 import CarDetails from './CarDetails';
-import store from '../redux/configureStore';
 import Navbar from './Navbar';
 import '../App.css';
 

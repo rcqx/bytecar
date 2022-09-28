@@ -29,11 +29,11 @@ const CarCard = ({
       onKeyDown={() => dispatch(fetchCarDetails(id))}
     >
       <div className="car-card">
-        <h4>
+        <h4 className="text-xl text-black font-bold antialised">
           {brand}
         </h4>
         <img className="card-img" src={image} alt={model} />
-        <h4>
+        <h4 className="text-xl text-black font-bold antialised">
           {model}
         </h4>
       </div>
