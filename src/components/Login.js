@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { loginUser } from '../redux/users/users';
 
 const Login = () => {
@@ -11,7 +11,6 @@ const Login = () => {
     e.preventDefault();
     if (userName.length > 3) {
       dispatch(loginUser(userName));
-      Navigate('/');
     }
   };
 
@@ -21,6 +20,10 @@ const Login = () => {
         <input onChange={(e) => setUsername(e.target.value)} className="signInput" type="text" placeholder="username" required />
         <button type="submit">Login</button>
       </form>
+      <p>
+        Not registered? &nbsp;
+        <Link to="/sign-up">Sign up</Link>
+      </p>
     </div>
   );
 };
