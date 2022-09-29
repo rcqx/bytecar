@@ -9,6 +9,7 @@ import Login from './Login';
 import SignUp from './Signup';
 import Cars from './Cars';
 import CarDetails from './CarDetails';
+import ReservationList from './ReservationList';
 import AddCar from './AddCar';
 import store from '../redux/configureStore';
 import Navbar from './Navbar';
@@ -27,6 +28,8 @@ const App = () => (
           <Route path="/cars" element={<Cars />} />
           <Route path="/car_details" element={<CarDetails />} />
           <Route path="/add_car" element={<AddCar />} />
+          <Route path="/reservations" element={<ReservationList />} />
+
         </Routes>
       </div>
     </BrowserRouter>

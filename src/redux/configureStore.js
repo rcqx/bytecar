@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import usersReducer from './users/users';
 import { carsReducer } from './carsReducer';
 import { reducerDetails } from './fetchCarDetails';
+import { reservationsReducer } from './reservationsReducer';
 
 const store = configureStore(
   {
@@ -9,6 +10,7 @@ const store = configureStore(
       user: usersReducer,
       cars: carsReducer,
       car_details: reducerDetails,
+      reservations: reservationsReducer,
     },
   },
 );
