@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import greetingReducer from './greetingsReducer';
+import usersReducer from './users/users';
 import { carsReducer } from './carsReducer';
 import { reducerDetails } from './fetchCarDetails';
 import { reservationsReducer } from './reservationsReducer';
@@ -7,7 +7,7 @@ import { reservationsReducer } from './reservationsReducer';
 const store = configureStore(
   {
     reducer: {
-      greeting: greetingReducer,
+      user: usersReducer,
       cars: carsReducer,
       car_details: reducerDetails,
       reservations: reservationsReducer,
