@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { fetchReservationsSuccess } from '../redux/reservationsReducer';
 import ReservationCard from './ReservationCard';
-import '../Reservations.css'
+import '../Reservations.css';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const ReservationList = () => {
       city={res.city}
       cardID={res.car_id}
       userID={res.user_id}
-    />
+    />,
   ));
 
   return (

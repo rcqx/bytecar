@@ -10,12 +10,12 @@ const ReservationCard = ({
   ReservationCard.propTypes = {
     date: propTypes.instanceOf(Date).isRequired,
     city: propTypes.string.isRequired,
-    cardID: propTypes.instanceOf(BigInt),
-    userID: propTypes.instanceOf(BigInt),
+    cardID: propTypes.instanceOf(Number).isRequired,
+    userID: propTypes.instanceOf(Number).isRequired,
   };
 
   return (
-    <div className='reservation-card'>
+    <div className="reservation-card">
       <h2>{cardID}</h2>
       <h2>{userID}</h2>
       <h2>{city}</h2>
