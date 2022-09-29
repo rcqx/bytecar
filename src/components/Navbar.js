@@ -1,6 +1,8 @@
 import React from 'react';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
+import * as TbIcons from 'react-icons/tb';
+import * as BsIcons from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import './navbar.css';
@@ -25,6 +27,20 @@ const links = [
     title: 'Add car',
     path: '/add_car',
     icon: <MdIcons.MdAddCircleOutline />,
+    cName: 'nav-text',
+  },
+  {
+    id: 4,
+    title: 'Test drive',
+    path: '/',
+    icon: <TbIcons.TbSteeringWheel />,
+    cName: 'nav-text',
+  },
+  {
+    id: 5,
+    title: 'Reservations',
+    path: '/reservations',
+    icon: <BsIcons.BsFillCalendarCheckFill />,
     cName: 'nav-text',
   },
 ];
