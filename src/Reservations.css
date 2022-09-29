@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+.reservation-card {
+  border: 2px solid black;
+  width: 50%;
+}
