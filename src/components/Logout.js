@@ -11,7 +11,7 @@ const Logout = () => {
     e.preventDefault();
     if (userName.length > 3) {
       dispatch(logoutUser(userName));
-      Navigate('/login')
+      Navigate('/login');
     }
   };
 
