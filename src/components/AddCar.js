@@ -1,27 +1,45 @@
-import React, { useState } from 'react';
-
-const handleSubmit = (event) => {
-  const brand = event.target.querySelector('#brand').value;
-  const price = event.target.querySelector('#price').value;
-  const image = event.target.querySelector('#car-image').files[0];
-  const bio = event.target.querySelector('#bio').value;
-
-  const formData = new FormData();
-  formData.append('image', image);
-  formData.append('brand', brand);
-  formData.append('price', price);
-  formData.append('bio', bio);
-};
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { addCar } from '../redux/carsReducer';
 
 export default function AddCar() {
-  const [value, setValue] = useState();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  // const [value, setValue] = useState();
 
-  const minYear = 2015;
-  const maxYear = new Date().getFullYear();
+  // const minYear = 2015;
+  // const maxYear = new Date().getFullYear();
 
-  const handleChange = (event) => {
-    const value = Math.max(minYear, Math.min(maxYear, Number(event.target.value)));
-    setValue(value);
+  // const handleChange = (event) => {
+  //   const value = Math.max(minYear, Math.min(maxYear, Number(event.target.value)));
+  //   setValue(value);
+  // };
+
+  const handleSubmit = (event) => {
+    const brand = event.target.querySelector('#brand').value;
+    const finance = event.target.querySelector('#finance_fee').value;
+    const image = event.target.querySelector('#car-image').files[0];
+    const model = event.target.querySelector('#model').value;
+    const purchase = event.target.querySelector('#purchase_fee').value;
+    const tap = event.target.querySelector('#tap').value;
+    const duration = event.target.querySelector('#duration').value;
+    const description = event.target.querySelector('#description').value;
+
+    const data = new FormData();
+    data.append('image', image);
+    data.append('brand', brand);
+    data.append('finance_fee', finance);
+    data.append('model', model);
+    data.append('purchase_fee', purchase);
+    data.append('tap', tap);
+    data.append('duration', duration);
+    data.append('description', description);
+
+    dispatch(addCar(data))
+      .then(() => {
+        navigate('/cars');
+      });
   };
 
   return (
@@ -36,9 +54,9 @@ export default function AddCar() {
             </label>
           </div>
           <div className="">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
-              Price
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" id="price" type="number" placeholder="Price per Day" required />
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="finance_fee">
+              Finance fee
+              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" id="finance_fee" type="number" placeholder="Finance fee" required />
             </label>
           </div>
           <div className="">
@@ -56,9 +74,29 @@ export default function AddCar() {
             </label>
           </div>
           <div className="">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="year">
-              Year
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" id="year" type="number" placeholder="Car manufacture year" required onChange={handleChange} value={value} />
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="purchase_fee">
+              Purchase fee
+              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" id="purchase_fee" type="number" placeholder="Purchase fee" required />
+            </label>
+          </div>
+          <div className="">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tap">
+              Tap
+              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" id="tap" type="number" placeholder="Tap" required />
+            </label>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row md:space-x-10 justify-between md:justify-start">
+          <div className="">
+            <label className="block text-gray-700 text-sm font-bold mb-4" htmlFor="description">
+              Description
+              <textarea type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" rows="5" cols="50" id="description" placeholder="Description (Max 100 characters)" maxLength="100" required />
+            </label>
+          </div>
+          <div className="">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="duration">
+              Duration
+              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" id="duration" type="number" placeholder="Duration" required />
             </label>
           </div>
         </div>
