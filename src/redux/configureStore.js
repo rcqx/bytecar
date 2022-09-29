@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import greetingReducer from './greetingsReducer';
-import carsReducer from './carsReducer';
+import usersReducer from './users/users';
+import { carsReducer } from './carsReducer';
+import { reducerDetails } from './fetchCarDetails';
 
 const store = configureStore(
   {
     reducer: {
-      greeting: greetingReducer,
+      user: usersReducer,
       cars: carsReducer,
+      car_details: reducerDetails,
     },
   },
 );
