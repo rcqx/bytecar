@@ -29,3 +29,12 @@ export const signup = async (userName) => {
   }
   return response;
 };
+
+export const authHeader = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  if (user && user.token) {
+    return { Authorization: `Bearer ${user.token}`, 'Content-Type': 'application/json' };
+  }
+  return {};
+};

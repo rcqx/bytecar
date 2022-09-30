@@ -22,7 +22,7 @@ const Login = () => {
       </form>
       <p>
         Not registered? &nbsp;
-        <Link to="/sign-up">Sign up</Link>
+        <Link to="/signup">Sign up</Link>
       </p>
     </div>
   );
