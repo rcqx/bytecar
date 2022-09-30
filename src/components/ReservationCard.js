@@ -4,22 +4,38 @@ import propTypes from 'prop-types';
 const ReservationCard = ({
   date,
   city,
-  cardID,
-  userID,
+  user,
+  car,
 }) => {
   ReservationCard.propTypes = {
     date: propTypes.instanceOf(Date).isRequired,
     city: propTypes.string.isRequired,
-    cardID: propTypes.instanceOf(Number).isRequired,
-    userID: propTypes.instanceOf(Number).isRequired,
+    car: propTypes.string.isRequired,
+    user: propTypes.string.isRequired,
   };
 
   return (
     <div className="reservation-card">
-      <h2>{cardID}</h2>
-      <h2>{userID}</h2>
-      <h2>{city}</h2>
-      <h2>{date}</h2>
+      <div>
+        <h2>
+          {'Reservation by: '}
+          {user}
+        </h2>
+        <h2>
+          {'Car: '}
+          {car}
+        </h2>
+        <h2>
+          {'City: '}
+          {city}
+        </h2>
+        <h2>
+          {'Pick-up date: '}
+          {date}
+        </h2>
+      </div>
+
+      <button className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Delete</button>
     </div>
   );
 };
