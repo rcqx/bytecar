@@ -11,6 +11,7 @@ export function fetchReservationsSuccess(data) {
     payload: data,
   };
 }
+
 // reducer
 export function reservationsReducer(state = initialState, action) {
   switch (action.type) {

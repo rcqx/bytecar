@@ -22,6 +22,7 @@ a {
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
   padding: 2em;
+  border-radius: 0.5em;
 }
 
 .car-card:hover {
