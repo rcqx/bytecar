@@ -11,6 +11,7 @@ import Cars from './Cars';
 import CarDetails from './CarDetails';
 import ReservationList from './ReservationList';
 import AddCar from './AddCar';
+import AddReservation from './AddReservation';
 import store from '../redux/configureStore';
 import Navbar from './Navbar';
 import '../App.css';
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/car_details" element={<CarDetails />} />
           <Route path="/add_car" element={<AddCar />} />
           <Route path="/reservations" element={<ReservationList />} />
+          <Route path="/testdrive" element={<AddReservation />} />
 
         </Routes>
       </div>
