@@ -1,17 +1,28 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import axios from 'axios';
 
 const ReservationCard = ({
+  id,
   date,
   city,
   user,
   car,
+  brand,
 }) => {
+  async function deleteReservation(id) {
+    await axios.delete(`http://localhost:3000/api/v1/reservations/${id}`).then((res) => {
+      console.log(res);
+      window.location.reload(false);
+    });
+  }
   ReservationCard.propTypes = {
-    date: propTypes.instanceOf(Date).isRequired,
+    id: propTypes.number.isRequired,
+    date: propTypes.string.isRequired,
     city: propTypes.string.isRequired,
     car: propTypes.string.isRequired,
-    user: propTypes.string.isRequired,
+    brand: propTypes.string.isRequired,
+    user: propTypes.number.isRequired,
   };
 
   return (
@@ -22,8 +33,12 @@ const ReservationCard = ({
           {user}
         </h2>
         <h2>
-          {'Car: '}
+          {'Car model: '}
           {car}
+        </h2>
+        <h2>
+          {'Brand: '}
+          {brand}
         </h2>
         <h2>
           {'City: '}
@@ -34,8 +49,13 @@ const ReservationCard = ({
           {date}
         </h2>
       </div>
-
-      <button className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Delete</button>
+      <button
+        onClick={() => deleteReservation(id)}
+        className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        type="submit"
+      >
+        Delete
+      </button>
     </div>
   );
 };

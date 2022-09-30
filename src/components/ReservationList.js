@@ -24,17 +24,19 @@ const ReservationList = () => {
   reservationList.forEach((res) => reservations.push(
     <ReservationCard
       key={res.id}
+      id={res.id}
       date={res.date}
       city={res.city}
       user={res.user_id}
-      car={res.car_id}
+      car={res.car.model}
+      brand={res.car.brand}
     />,
   ));
 
   return (
     <div className="reservation-list">
       <h1 className="text-3xl font-bold mb-4 antialised">Reservations</h1>
-      <h4 className="text-2xl antialised">Please review your reservations</h4>
+      <h4 className="text-2xl antialised">{reservationList.length > 0 ? 'Please review your reservations' : 'First create a reservation!'}</h4>
       <div>{reservations}</div>
     </div>
   );
