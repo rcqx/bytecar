@@ -14,6 +14,7 @@ const Cars = () => {
 
   async function fetchData() {
     await axios.get('http://localhost:3000/api/v1/cars').then((res) => {
+      localStorage.setItem('cars', JSON.stringify(res));
       dispatch(fetchCarsSuccess(res.data));
     });
   }

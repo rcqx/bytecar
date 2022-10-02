@@ -19,4 +19,14 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 0.5em;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+.reservation-card:hover {
+  transform: scale(1.025);
+  cursor: pointer;
+  box-shadow: 1px 1px 8px 1px rgba(22, 65, 255, 0.3);
+  border: 1px solid #060b26;
 }
