@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
 import { fetchReservationsSuccess } from '../redux/reservationsReducer';
 import ReservationCard from './ReservationCard';
 import '../Reservations.css';
+import { request } from '../redux/users/api';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const ReservationList = () => {
   const reservations = [];
 
   async function fetchData() {
-    await axios.get('http://localhost:3000/api/v1/reservations').then((res) => {
+    await request.get('http://localhost:3000/api/v1/reservations').then((res) => {
       dispatch(fetchReservationsSuccess(res.data));
     });
   }
