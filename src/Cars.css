@@ -38,6 +38,7 @@ a {
   justify-content: flex-end;
   align-items: center;
   height: 100vh;
+
   /* border: 2px solid red; */
 }
 
@@ -51,6 +52,7 @@ a {
   align-items: center;
   height: 75vh;
   width: 97%;
+
   /* border: 2px solid green; */
   overflow-x: scroll;
 }
@@ -162,4 +164,3 @@ table > * {
 .link-to-cars {
   font-weight: bold;
 }
-
