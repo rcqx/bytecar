@@ -12,9 +12,9 @@ const CarDetails = () => {
     return (
       <div className="main-details-wrapper w-full h-screen">
         <div className="details-wrapper">
-          <h1 className="text-3xl font-bold">{carDetailsParsed.brand}</h1>
-          <img className="card-img" src={carDetailsParsed.image} alt={carDetailsParsed.model} />
-          <h4 className="text-3xl font-bold">{carDetailsParsed.model}</h4>
+          <h1 className="text-3xl font-bold">{carDetailsParsed[0].brand}</h1>
+          <img className="card-img" src={carDetailsParsed[0].image} alt={carDetailsParsed[0].model} />
+          <h4 className="text-3xl font-bold">{carDetailsParsed[0].model}</h4>
         </div>
         <div className="right-side">
           <table>
@@ -22,27 +22,27 @@ const CarDetails = () => {
               <th>Finance fee</th>
               <td>
                 $
-                {carDetailsParsed.finance_fee}
+                {carDetailsParsed[0].finance_fee}
               </td>
             </tr>
             <tr>
               <th>Option to purchase fee</th>
               <td>
                 $
-                {carDetailsParsed.purchase_fee}
+                {carDetailsParsed[0].purchase_fee}
               </td>
             </tr>
             <tr>
               <th>Total ammount payable</th>
               <td>
                 $
-                {carDetailsParsed.tap}
+                {carDetailsParsed[0].tap}
               </td>
             </tr>
             <tr>
               <th>Duration</th>
               <td>
-                {carDetailsParsed.duration}
+                {carDetailsParsed[0].duration}
                 {' months'}
               </td>
             </tr>
@@ -69,9 +69,9 @@ const CarDetails = () => {
   return (
     <div className="main-details-wrapper w-full h-screen">
       <div className="details-wrapper">
-        <h1 className="text-3xl font-bold">{carDetails.brand}</h1>
-        <img className="card-img" src={carDetails.image} alt={carDetails.model} />
-        <h4 className="text-3xl font-bold">{carDetails.model}</h4>
+        <h1 className="text-3xl font-bold">{carDetails[0].brand}</h1>
+        <img className="card-img" src={carDetails[0].image} alt={carDetails[0].model} />
+        <h4 className="text-3xl font-bold">{carDetails[0].model}</h4>
       </div>
       <div className="right-side">
         <table>
@@ -79,27 +79,27 @@ const CarDetails = () => {
             <th>Finance fee</th>
             <td>
               $
-              {carDetails.finance_fee}
+              {carDetails[0].finance_fee}
             </td>
           </tr>
           <tr>
             <th>Option to purchase fee</th>
             <td>
               $
-              {carDetails.purchase_fee}
+              {carDetails[0].purchase_fee}
             </td>
           </tr>
           <tr>
             <th>Total ammount payable</th>
             <td>
               $
-              {carDetails.tap}
+              {carDetails[0].tap}
             </td>
           </tr>
           <tr>
             <th>Duration</th>
             <td>
-              {carDetails.duration}
+              {carDetails[0].duration}
               {' months'}
             </td>
           </tr>
