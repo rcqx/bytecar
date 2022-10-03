@@ -8,24 +8,19 @@ export default function AddReservation() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const carList = useSelector((state) => state.cars);
-  console.log(carList);
-  // const fetchCars = () => {
-  //   dispatch(fetchCarsSuccess())
-  // }
+  const { user } = JSON.parse(localStorage.getItem('user'));
 
   const handleSubmit = (event) => {
     const date = event.target.querySelector('#date').value;
     const city = event.target.querySelector('#city').value;
-    const userID = event.target.querySelector('#userID').value;
     const carID = event.target.querySelector('#carID').value;
 
     const data = new FormData();
     data.append('date', date);
     data.append('city', city);
-    data.append('user_id', userID);
     data.append('card_id', carID);
 
-    dispatch(createReservation(data))
+    dispatch(createReservation(data, user))
       .then(() => {
         navigate('/revervations');
       });

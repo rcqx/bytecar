@@ -38,3 +38,5 @@ export const authHeader = () => {
   }
   return {};
 };
+
+export const request = axios.create({ headers: authHeader() });
