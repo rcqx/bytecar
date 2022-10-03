@@ -5,6 +5,7 @@ const FETCH_CARS = 'carsReducer/FETCH_CARS';
 const FETCH_CAR_DETAILS = 'carsReducer/FETCH_CAR_DETAILS';
 const ADD_CAR = 'carsReducer/ADD_CAR';
 const API_URL = 'http://localhost:3000';
+const DEL_CAR = 'carsReducer/DEL_CAR';
 
 // initial state
 const initialState = [];
@@ -16,6 +17,26 @@ export const addCar = (data) => async (dispatch) => {
     .catch((error) => error);
   dispatch({
     type: ADD_CAR,
+    payload: response,
+  });
+};
+
+export const getCars = () => async (dispatch) => {
+  const response = await axios.get(`${API_URL}/api/v1/cars`)
+    .then((res) => res.data)
+    .catch((error) => error);
+  dispatch({
+    type: FETCH_CARS,
+    payload: response,
+  });
+};
+
+export const delCar = (id) => async (dispatch) => {
+  const response = await axios.delete(`${API_URL}/api/v1/cars/${id}`)
+    .then((res) => res.data)
+    .catch((error) => error);
+  dispatch({
+    type: DEL_CAR,
     payload: response,
   });
 };

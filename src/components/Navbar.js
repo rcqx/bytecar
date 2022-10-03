@@ -43,6 +43,13 @@ const links = [
     icon: <BsIcons.BsFillCalendarCheckFill />,
     cName: 'nav-text',
   },
+  {
+    id: 6,
+    title: 'Remove car',
+    path: '/remove_car',
+    icon: <MdIcons.MdRemoveCircleOutline />,
+    cName: 'nav-text',
+  },
 ];
 
 function Navbar() {
