@@ -42,6 +42,12 @@ a {
   /* border: 2px solid red; */
 }
 
+.main-wrapper h1 {
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 .main-wrapper h4 {
   color: gray;
 }

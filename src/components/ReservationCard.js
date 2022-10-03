@@ -13,7 +13,8 @@ const ReservationCard = ({
   async function deleteReservation(id) {
     await axios.delete(`http://localhost:3000/api/v1/reservations/${id}`).then((res) => {
       console.log(res);
-      window.location.reload(false);
+      const card = document.getElementById(id);
+      card.remove();
     });
   }
   ReservationCard.propTypes = {
@@ -26,7 +27,7 @@ const ReservationCard = ({
   };
 
   return (
-    <div className="reservation-card">
+    <div id={id} className="reservation-card">
       <div>
         <h2>
           {'Reservation by: '}
