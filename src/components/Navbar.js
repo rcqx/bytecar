@@ -32,7 +32,7 @@ const links = [
   {
     id: 4,
     title: 'Test drive',
-    path: '/',
+    path: '/reserve',
     icon: <TbIcons.TbSteeringWheel />,
     cName: 'nav-text',
   },

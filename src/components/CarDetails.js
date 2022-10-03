@@ -53,13 +53,15 @@ const CarDetails = () => {
           <Link className="link-to-cars" to="/cars">
             DISCOVER MORE MODELS
           </Link>
-          <button
-            type="submit"
-            className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            RESERVE NOW
-            <TbSteeringWheel size={35} />
-          </button>
+          <Link className="link-to-reserve" to="/reserve">
+            <button
+              type="submit"
+              className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              RESERVE NOW
+              <TbSteeringWheel size={35} />
+            </button>
+          </Link>
         </div>
       </div>
     );
@@ -108,13 +110,15 @@ const CarDetails = () => {
         <Link className="link-to-cars" to="/cars">
           DISCOVER MORE MODELS
         </Link>
-        <button
-          type="submit"
-          className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          RESERVE NOW
-          <TbSteeringWheel size={35} />
-        </button>
+        <Link className="link-to-reserve" to="/reserve">
+          <button
+            type="submit"
+            className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            RESERVE NOW
+            <TbSteeringWheel size={35} />
+          </button>
+        </Link>
       </div>
     </div>
   );

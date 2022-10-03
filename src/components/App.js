@@ -13,6 +13,7 @@ import ReservationList from './ReservationList';
 import AddCar from './AddCar';
 import store from '../redux/configureStore';
 import Navbar from './Navbar';
+import Home from './Home';
 import '../App.css';
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       </div>
       <div className="content">
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/cars" element={<Cars />} />
