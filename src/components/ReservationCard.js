@@ -14,6 +14,7 @@ const ReservationCard = ({
     await axios.delete(`http://localhost:3000/api/v1/reservations/${id}`).then((res) => {
       console.log(res);
       window.location.reload(false);
+      const card = document.getElementById(`car-${car.id}`);
     });
   }
   ReservationCard.propTypes = {
