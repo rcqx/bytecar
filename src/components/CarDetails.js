@@ -112,7 +112,7 @@ const CarDetails = () => {
           type="submit"
           className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          RESERVE NOW
+          BOOK A TEST-DRIVE
           <TbSteeringWheel size={35} />
         </button>
       </div>
