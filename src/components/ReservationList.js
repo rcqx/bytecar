@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
 import { fetchReservationsSuccess } from '../redux/reservationsReducer';
 import ReservationCard from './ReservationCard';
 import '../Reservations.css';
+import { request } from '../redux/users/api';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
   const reservationList = useSelector((state) => state.reservations);
   const reservations = [];
+  const user = JSON.parse(localStorage.getItem('user'));
+  console.log(user);
 
   async function fetchData() {
-    await axios.get('http://localhost:3000/api/v1/reservations').then((res) => {
+    await request.get('http://localhost:3000/api/v1/reservations').then((res) => {
       dispatch(fetchReservationsSuccess(res.data));
     });
   }
@@ -27,7 +29,7 @@ const ReservationList = () => {
       id={res.id}
       date={res.date}
       city={res.city}
-      user={res.user_id}
+      user={user.user}
       car={res.car.model}
       brand={res.car.brand}
     />,

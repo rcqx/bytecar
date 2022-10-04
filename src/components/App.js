@@ -12,6 +12,7 @@ import CarDetails from './CarDetails';
 import ReservationList from './ReservationList';
 import AddCar from './AddCar';
 import RemoveCar from './RemoveCar';
+import AddReservation from './AddReservation';
 import store from '../redux/configureStore';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/add_car" element={<AddCar />} />
           <Route path="/reservations" element={<ReservationList />} />
           <Route path="/remove_car" element={<RemoveCar />} />
+          <Route path="/testdrive" element={<AddReservation />} />
 
         </Routes>
       </div>

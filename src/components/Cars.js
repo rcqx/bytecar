@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import { FaFacebookSquare, FaTwitter, FaInstagramSquare } from 'react-icons/fa';
 import { fetchCarsSuccess } from '../redux/carsReducer';
 import CarCard from './CarCard';
-// import { fetchCarDetails } from '../redux/fetchCarDetails';
+import { request } from '../redux/users/api';
 
 const Cars = () => {
   const dispatch = useDispatch();
@@ -13,8 +13,7 @@ const Cars = () => {
   const carProps = [];
 
   async function fetchData() {
-    await axios.get('http://localhost:3000/api/v1/cars').then((res) => {
-      localStorage.setItem('cars', JSON.stringify(res));
+    await request.get('http://localhost:3000/api/v1/cars').then((res) => {
       dispatch(fetchCarsSuccess(res.data));
     });
   }
