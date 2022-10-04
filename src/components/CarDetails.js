@@ -110,15 +110,13 @@ const CarDetails = () => {
         <Link className="link-to-cars" to="/cars">
           DISCOVER MORE MODELS
         </Link>
-        <Link className="link-to-reserve" to="/reserve">
-          <button
-            type="submit"
-            className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            RESERVE NOW
-            <TbSteeringWheel size={35} />
-          </button>
-        </Link>
+        <button
+          type="submit"
+          className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          BOOK A TEST-DRIVE
+          <TbSteeringWheel size={35} />
+        </button>
       </div>
     </div>
   );
