@@ -2,9 +2,9 @@
 import { createAction, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { signup, login } from './api';
 
-export const getUsername = createAction('users/username', () => ({
-  payload: JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).user : null,
-}));
+export const getUsername = createAction('users/username', () => (
+  JSON.parse(localStorage.getItem('user'))
+));
 
 export const loginUser = createAsyncThunk('users/loging', async (username) => {
   const response = await login(username);
