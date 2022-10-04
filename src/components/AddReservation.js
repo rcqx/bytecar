@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createReservation } from '../redux/reservationsReducer';
-import { fetchCarsSuccess } from '../redux/carsReducer';
-import { request } from '../redux/users/api';
+import { getCars } from '../redux/carsReducer';
 // import { fetchCarsSuccess } from '../redux/carsReducer';
 
 export default function AddReservation() {
@@ -28,15 +27,8 @@ export default function AddReservation() {
       });
   };
 
-  async function fetchData() {
-    await request.get('http://localhost:3000/api/v1/cars').then((res) => {
-      dispatch(fetchCarsSuccess(res.data));
-    });
-  }
-
   useEffect(() => {
-    fetchData();
-    // eslint-disable-next-linegit
+    dispatch(getCars());
   }, []);
 
   return (

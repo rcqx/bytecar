@@ -15,14 +15,14 @@ export function fetchReservationsSuccess(data) {
   };
 }
 
-export const createReservation = (data, user) => async (dispatch) => {
-  const response = await request.post(`http://localhost:3000/api/v1/users/${user}/reservations`, data)
+export const createReservation = (data) => async (dispatch) => {
+  console.log(data);
+  const response = await request.post('http://localhost:3000/api/v1/users/frank/reservations', data)
     .then((res) => res.data)
     .catch((error) => error);
-  console.log(response);
   dispatch({
     type: CREATE_RESERVATION,
-    payload: { reservation: { response } },
+    payload: response,
   });
 };
 

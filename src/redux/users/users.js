@@ -1,6 +1,10 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAction, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { signup, login } from './api';
+
+export const getUsername = createAction('users/username', () => ({
+  payload: JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).user : null,
+}));
 
 export const loginUser = createAsyncThunk('users/loging', async (username) => {
   const response = await login(username);
@@ -23,6 +27,9 @@ const userSlice = createSlice({
     status: null,
   },
   extraReducers: {
+    [getUsername]: (state, { payload }) => {
+      state.username = payload;
+    },
     [loginUser.fulfilled]: (state, { payload }) => {
       state.username = payload.user;
       state.status = 'success';
