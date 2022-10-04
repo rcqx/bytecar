@@ -9,6 +9,8 @@ const ReservationList = () => {
   const dispatch = useDispatch();
   const reservationList = useSelector((state) => state.reservations);
   const reservations = [];
+  const user = JSON.parse(localStorage.getItem('user'));
+  console.log(user);
 
   async function fetchData() {
     await request.get('http://localhost:3000/api/v1/reservations').then((res) => {
@@ -27,7 +29,7 @@ const ReservationList = () => {
       id={res.id}
       date={res.date}
       city={res.city}
-      user={res.user_id}
+      user={user.user}
       car={res.car.model}
       brand={res.car.brand}
     />,
