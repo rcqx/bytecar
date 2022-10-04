@@ -18,7 +18,7 @@ export default function AddReservation() {
     const data = new FormData();
     data.append('date', date);
     data.append('city', city);
-    data.append('card_id', carID);
+    data.append('car_id', carID);
 
     dispatch(createReservation(data, user))
       .then(() => {
@@ -34,9 +34,9 @@ export default function AddReservation() {
           <div className="">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="city">
               City
-              <select name="carID" id="carID" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" placeholder="City" required>
+              <select className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-custom-green-500 focus:placeholder:text-custom-green-500" placeholder="City" required>
                 {carList.map((car) => (
-                  <option key={car.car_id} value={car.model}>{car.model}</option>
+                  <option name="carID" id="carID" key={car.id} value={car.id}>{car.model}</option>
                 ))}
               </select>
             </label>
