@@ -1,11 +1,10 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { addCar } from '../redux/carsReducer';
 
 export default function AddCar() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   // const [value, setValue] = useState();
 
   // const minYear = 2015;
@@ -38,7 +37,7 @@ export default function AddCar() {
 
     dispatch(addCar(data))
       .then(() => {
-        navigate('/cars');
+        <Navigate to="/cars" />;
       });
   };
 

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 import * as TbIcons from 'react-icons/tb';
 import * as BsIcons from 'react-icons/bs';
+import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import './navbar.css';
@@ -13,7 +14,7 @@ const links = [
     title: 'Home',
     path: '/',
     icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text',
+    cName: 'nav-text active',
   },
   {
     id: 2,
@@ -53,19 +54,28 @@ const links = [
 ];
 
 function Navbar() {
+  const [Desktop, setNavbar] = useState(false);
+
+  const showNavbar = () => setNavbar(!Desktop);
+
   return (
     <>
+      <div>
+        <FaIcons.FaBars className="mx-0 text-4xl bg-none text-blue-900" onClick={showNavbar} />
+      </div>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className="nav-menu active">
+        <nav className={Desktop ? 'nav-menu active' : 'nav-menu'}>
           <ul className="nav-menu-items">
-            <li className="navbar-toggle">
-              <Link to="/" className="menu-bars">
-                <AiIcons.AiOutlineClose />
-              </Link>
+            <li className="nav-color flex flex-row h-36 items-center">
+              <AiIcons.AiOutlineClose onClick={showNavbar} className="text-xl self-start mt-0 absolute" />
+              <MdIcons.MdOutlineElectricCar className="text-7xl mx-auto" />
             </li>
             {links.map((link) => (
-              <li key={link.id} className={link.cName}>
-                <Link to={link.path}>
+              <li
+                key={link.id}
+                className={link.cName}
+              >
+                <Link to={link.path} className="active">
                   {link.icon}
                   <span>{link.title}</span>
                 </Link>
