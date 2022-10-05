@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 import * as TbIcons from 'react-icons/tb';
 import * as BsIcons from 'react-icons/bs';
-import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import './navbar.css';
@@ -54,20 +53,12 @@ const links = [
 ];
 
 function Navbar() {
-  const [Desktop, setNavbar] = useState(false);
-
-  const showNavbar = () => setNavbar(!Desktop);
-
   return (
     <>
-      <div>
-        <FaIcons.FaBars className="mx-0 text-4xl bg-none text-blue-900" onClick={showNavbar} />
-      </div>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className={Desktop ? 'nav-menu active' : 'nav-menu'}>
+        <nav className="nav-menu active">
           <ul className="nav-menu-items">
             <li className="nav-color flex flex-row h-36 items-center">
-              <AiIcons.AiOutlineClose onClick={showNavbar} className="text-xl self-start mt-0 absolute" />
               <MdIcons.MdOutlineElectricCar className="text-7xl mx-auto" />
             </li>
             {links.map((link) => (

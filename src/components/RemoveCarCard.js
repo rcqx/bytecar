@@ -45,15 +45,15 @@ function RemoveCarCard({ car }) {
       id={`car-${car.id}`}
       className="flex flex-col md:flex-row justify-between items-center mt-8 py-4 px-5 shadow-lg w-3/4 border-2 border-transparent hover:border-blue-900 rounded-md hover:shadow-2xl transition hover:scale-110 duration:300ms"
     >
-      <div className="flex w-full grow justify-between items-center">
-        <div className="item h-20">
-          <img className="w-fit h-20 m-auto object-cover rounded-md bg-custom-green-500" src={car.image} alt={car.model} />
+      <div className="lg:flex w-full grow justify-between items-center">
+        <div className="h-20">
+          <img className="object-cover lg:h-20 m-auto rounded-md" src={car.image} alt={car.model} />
         </div>
-        <div className="item w-4/5 h-28 text-center flex flex-wrap flex-col justify-around overflow-hidden mx-5">
-          <div className="flex flex-row justify-between hidden" id={`msg-${car.id}`}>
+        <div className="w-fit text-xs pt-2 lg:w-4/5 h-28 text-center flex flex-wrap flex-col justify-around overflow-hidden mx-5">
+          <div className="lg:flex flex-row justify-between hidden" id={`msg-${car.id}`}>
             <h3 className="font-bold">Are you sure you want to remove this cars?</h3>
           </div>
-          <div className="flex flex-row justify-between" id={`data-${car.id}`}>
+          <div className="flex flex-col lg:flex-row justify-between " id={`data-${car.id}`}>
             <h3 className="font-bold">
               Brand:&nbsp;
               {car.brand}
