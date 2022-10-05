@@ -11,21 +11,18 @@ import Cars from './Cars';
 import CarDetails from './CarDetails';
 import ReservationList from './ReservationList';
 import AddCar from './AddCar';
+import Home from './Home';
 import RemoveCar from './RemoveCar';
 import AddReservation from './AddReservation';
 import store from '../redux/configureStore';
-import Navbar from './Navbar';
-import Home from './Home';
 import '../App.css';
+import Layout from '../layout';
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <div className="bar">
-        <Navbar />
-      </div>
-      <div className="content">
-        <Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
@@ -35,9 +32,8 @@ const App = () => (
           <Route path="/reservations" element={<ReservationList />} />
           <Route path="/remove_car" element={<RemoveCar />} />
           <Route path="/testdrive" element={<AddReservation />} />
-
-        </Routes>
-      </div>
+        </Route>
+      </Routes>
     </BrowserRouter>
   </Provider>
 );
