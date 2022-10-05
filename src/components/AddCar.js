@@ -42,12 +42,12 @@ export default function AddCar() {
   };
 
   return (
-    <div className="flex flex-col 100vh items-center">
+    <div className="flex flex-col items-center">
       <div className="py-10">
         <h1 className="text-5xl">Add Car</h1>
       </div>
       <div className="py-8">
-        <form className="bg-white mx-auto md: px-4" onSubmit={handleSubmit}>
+        <form className="bg-white mx-auto px-4" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row md: gap-2">
             <div>
               <label className="block text-gray-700 font-bold mb-2 text-base" htmlFor="brand">
