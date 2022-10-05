@@ -1,5 +1,8 @@
+import { request } from './users/api';
+
 // action type
 const FETCH_RESERVATIONS = 'reservationsReducer/FETCH_RESERVATIONS';
+const CREATE_RESERVATION = 'reservationsReducer/CREATE_RESERVATION';
 
 // initial state
 const initialState = [];
@@ -11,6 +14,17 @@ export function fetchReservationsSuccess(data) {
     payload: data,
   };
 }
+
+export const createReservation = (data) => async (dispatch) => {
+  console.log(data);
+  const response = await request.post('http://localhost:3000/api/v1/users/frank/reservations', data)
+    .then((res) => res.data)
+    .catch((error) => error);
+  dispatch({
+    type: CREATE_RESERVATION,
+    payload: response,
+  });
+};
 
 // reducer
 export function reservationsReducer(state = initialState, action) {
