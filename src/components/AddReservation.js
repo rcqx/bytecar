@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { createReservation } from '../redux/reservationsReducer';
 import { getCars } from '../redux/carsReducer';
 
 export default function AddReservation() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const carList = useSelector((state) => state.cars);
   const { user } = JSON.parse(localStorage.getItem('user')) ? (JSON.parse(localStorage.getItem('user'))) : ([]);
 
@@ -20,10 +20,7 @@ export default function AddReservation() {
     data.append('city', city);
     data.append('car_id', carID);
 
-    dispatch(createReservation(data, user))
-      .then(() => {
-        navigate('/revervations');
-      });
+    dispatch(createReservation(data, user));
   };
 
   useEffect(() => {
