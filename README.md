@@ -1,5 +1,12 @@
 # ByteCar
 
+### Home:
+![image](https://user-images.githubusercontent.com/68971295/194430936-e0684210-4d75-469e-b9f3-52023ba0c8fb.png)
+
+### Kanban: 
+![image](https://user-images.githubusercontent.com/68971295/194431486-c8364654-3faa-49a7-8ea2-f4b954b8d793.png)
+
+
 This is a web page that let's you make an appointment for an electic car test drive.
 
 This app makes use of API calls to [its back-end API](https://github.com/jr-cast/bytecar_api) to get the data for everything regarding users, cars, and reservations.
