@@ -6,7 +6,6 @@ import { getCars } from '../redux/carsReducer';
 
 export default function AddReservation() {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
   const carList = useSelector((state) => state.cars);
   const { user } = JSON.parse(localStorage.getItem('user')) ? (JSON.parse(localStorage.getItem('user'))) : ([]);
 

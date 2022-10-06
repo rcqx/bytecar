@@ -5,15 +5,6 @@ import { addCar } from '../redux/carsReducer';
 
 export default function AddCar() {
   const dispatch = useDispatch();
-  // const [value, setValue] = useState();
-
-  // const minYear = 2015;
-  // const maxYear = new Date().getFullYear();
-
-  // const handleChange = (event) => {
-  //   const value = Math.max(minYear, Math.min(maxYear, Number(event.target.value)));
-  //   setValue(value);
-  // };
 
   const handleSubmit = (event) => {
     const brand = event.target.querySelector('#brand').value;

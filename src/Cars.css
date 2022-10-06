@@ -38,8 +38,6 @@ a {
   justify-content: flex-end;
   align-items: center;
   height: 100vh;
-
-  /* border: 2px solid red; */
 }
 
 .main-wrapper h1 {
@@ -58,8 +56,6 @@ a {
   align-items: center;
   height: 75vh;
   width: 97%;
-
-  /* border: 2px solid green; */
   overflow-x: scroll;
 }
 
@@ -148,12 +144,6 @@ table > * {
 
 .right-side {
   box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
-  padding: 1em;
 }
 
 .right-side button {

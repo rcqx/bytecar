@@ -11,8 +11,7 @@ const ReservationCard = ({
   brand,
 }) => {
   async function deleteReservation(user, id) {
-    await request.delete(`http://localhost:3000/api/v1/users/${user}/reservations/${id}`).then((res) => {
-      console.log(res);
+    await request.delete(`http://localhost:3000/api/v1/users/${user}/reservations/${id}`).then(() => {
       const card = document.getElementById(id);
       card.remove();
     });
