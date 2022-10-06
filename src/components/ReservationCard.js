@@ -32,29 +32,28 @@ const ReservationCard = ({
         {user}
         &apos;s reservantion:
       </h2>
-      <div className="flex items-center p-4">
-        <table className="flex-none text-sm text-left text-gray-500 dark:text-gray-400 mb-4">
-          <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
+      <div className=" p-4 flex-1 w-64">
+        <table className="text-sm text-left text-gray-500 dark:text-gray-400 mb-4">
+          <thead className=" flex flex-col items-start text-xs text-gray-700 uppercase dark:text-gray-400">
             <tr>
-              <th className="py-3 px-6">Model</th>
-              <th>Brand</th>
+              <th className="py-4 px-3">Model</th>
+              <th className="py-4 px-3">Brand</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="flex flex-col justify-between">
             <tr>
-              <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">{car}</td>
-              <td>{brand}</td>
+              <td className=" py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">{car}</td>
+              <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">{brand}</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div className="flex flex-col items-center">
-        <div>
+      <div className="flex flex-col items-center flex-1 w-32">
+        <div className="flex flex-col items-center">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-l font-semibold text-gray-500 mr-2 mb-2">
             {city}
           </span>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-l font-semibold text-gray-500 mr-2 mb-2">
-            {'Pick-up date: '}
             {date}
           </span>
         </div>
