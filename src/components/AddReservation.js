@@ -8,7 +8,6 @@ export default function AddReservation() {
   const dispatch = useDispatch();
   // const navigate = useNavigate();
   const carList = useSelector((state) => state.cars);
-  const { user } = JSON.parse(localStorage.getItem('user')) ? (JSON.parse(localStorage.getItem('user'))) : ([]);
 
   const handleSubmit = (event) => {
     const date = event.target.querySelector('#date').value;
@@ -20,7 +19,7 @@ export default function AddReservation() {
     data.append('city', city);
     data.append('car_id', carID);
 
-    dispatch(createReservation(data, user));
+    dispatch(createReservation(data));
   };
 
   useEffect(() => {
