@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
 import { FaFacebookSquare, FaTwitter, FaInstagramSquare } from 'react-icons/fa';
 import { fetchCarsSuccess } from '../redux/carsReducer';
 import CarCard from './CarCard';
@@ -44,13 +43,15 @@ const Cars = () => {
   ));
 
   return (
-    <div className="main-wrapper">
-      <h1 className="text-3xl font-bold mb-4 antialised">Bytecar available electric models</h1>
-      <h4 className="text-2xl antialised">Please select a model</h4>
-      <div className="cars-wrapper">
+    <>
+      <div className="flex flex-col items-center text-center py-10">
+        <h1 className="text-3xl font-bold mb-4">Bytecar available electric models</h1>
+        <h4 className="text-2xl">Please select a model</h4>
+      </div>
+      <div className="lg:flex flex-row items-center py-5">
         {carProps}
       </div>
-    </div>
+    </>
   );
 };
 

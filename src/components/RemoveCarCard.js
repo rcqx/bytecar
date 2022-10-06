@@ -50,7 +50,7 @@ function RemoveCarCard({ car }) {
           <img className="object-cover lg:h-20 m-auto rounded-md" src={car.image} alt={car.model} />
         </div>
         <div className="w-fit text-xs pt-2 lg:w-4/5 h-28 text-center flex flex-wrap flex-col justify-around overflow-hidden mx-5">
-          <div className="lg:flex flex-row justify-between hidden" id={`msg-${car.id}`}>
+          <div className="hidden lg:flex-row justify-between" id={`msg-${car.id}`}>
             <h3 className="font-bold">Are you sure you want to remove this cars?</h3>
           </div>
           <div className="flex flex-col lg:flex-row justify-between " id={`data-${car.id}`}>

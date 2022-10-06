@@ -10,7 +10,6 @@ const ReservationList = () => {
   const reservationList = useSelector((state) => state.reservations);
   const reservations = [];
   const user = JSON.parse(localStorage.getItem('user'));
-  console.log(user);
 
   async function fetchData() {
     await request.get('http://localhost:3000/api/v1/reservations').then((res) => {
