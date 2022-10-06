@@ -11,6 +11,9 @@ This is a web page that let's you make an appointment for an electic car test dr
 
 This app makes use of API calls to [its back-end API](https://github.com/jr-cast/bytecar_api) to get the data for everything regarding users, cars, and reservations.
 
+## ERD
+![image](https://user-images.githubusercontent.com/58822719/194433267-e653e8aa-103c-4528-b204-25fd05aa9075.png)
+
 ## App functions: :wink:
 
 With the ByteCar app, you can do the following:
