@@ -44,13 +44,15 @@ const Cars = () => {
   ));
 
   return (
-    <div className="main-wrapper">
-      <h1 className="text-3xl font-bold mb-4 antialised">Bytecar available electric models</h1>
-      <h4 className="text-2xl antialised">Please select a model</h4>
-      <div className="cars-wrapper">
+    <>
+      <div className="flex flex-col items-center text-center py-10">
+        <h1 className="text-3xl font-bold mb-4">Bytecar available electric models</h1>
+        <h4 className="text-2xl">Please select a model</h4>
+      </div>
+      <div className="overflow-y-auto h-[87%]">
         {carProps}
       </div>
-    </div>
+    </>
   );
 };
 
