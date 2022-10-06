@@ -12,13 +12,14 @@ export default function AddReservation() {
     const date = event.target.querySelector('#date').value;
     const city = event.target.querySelector('#city').value;
     const carID = event.target.querySelector('#carID').value;
+    const { user } = JSON.parse(localStorage.getItem('user')) ? (JSON.parse(localStorage.getItem('user'))) : ([]);
 
     const data = new FormData();
     data.append('date', date);
     data.append('city', city);
     data.append('car_id', carID);
 
-    dispatch(createReservation(data));
+    dispatch(createReservation(data, user));
   };
 
   useEffect(() => {

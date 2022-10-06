@@ -61,7 +61,7 @@ const CarDetails = () => {
               type="submit"
               className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3"
             >
-              RESERVE NOW
+              BOOK A TEST-DRIVE
               <TbSteeringWheel size={35} />
             </button>
           </Link>
@@ -119,9 +119,9 @@ const CarDetails = () => {
         <Link className="link-to-reserve" to="/testdrive">
           <button
             type="submit"
-            className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-3"
+            className="config-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            RESERVE NOW
+            BOOK A TEST-DRIVE
             <TbSteeringWheel size={35} />
           </button>
         </Link>

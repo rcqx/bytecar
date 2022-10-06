@@ -15,8 +15,9 @@ export function fetchReservationsSuccess(data) {
   };
 }
 
-export const createReservation = (data) => async (dispatch) => {
-  const response = await request.post('http://localhost:3000/api/v1/reservations', data)
+export const createReservation = (data, user) => async (dispatch) => {
+  console.log(data);
+  const response = await request.post(`http://localhost:3000/api/v1/users/${user}/reservations`, data)
     .then((res) => res.data)
     .catch((error) => error);
   dispatch({
