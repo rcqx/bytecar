@@ -16,6 +16,7 @@ const Login = () => {
       setUsername();
       navigate('/');
     }
+    window.location.reload(false);
   };
 
   return (

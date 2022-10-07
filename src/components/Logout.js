@@ -8,6 +8,7 @@ const Logout = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    window.location.reload(false);
     dispatch(logoutUser());
   }, [dispatch]);
 

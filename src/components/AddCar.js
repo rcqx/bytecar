@@ -55,7 +55,7 @@ export default function AddCar() {
             <div>
               <label className="block text-gray-700 text-base font-bold mb-2" htmlFor="car-image">
                 Car Image
-                <input className="form-control block w-full text-base text-main" id="car-image" type="file" placeholder="Upload Car Image" accept="image/*" required />
+                <input className="form-control block w-full text-base text-main" id="car-image" type="file" placeholder="Upload Car Image" accept="image/*" />
               </label>
             </div>
           </div>
