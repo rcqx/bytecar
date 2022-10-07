@@ -9,7 +9,7 @@ export const logout = () => {
 };
 
 export const login = async (userName) => {
-  const request = await axios.post('http://localhost:3000/api/v1/sessions', {
+  const request = await axios.post('https://bytecar.herokuapp.com//api/v1/sessions', {
     username: userName,
   });
   const response = request.data;
@@ -20,7 +20,7 @@ export const login = async (userName) => {
 };
 
 export const signup = async (userName) => {
-  const request = await axios.post('http://localhost:3000/api/v1/users', {
+  const request = await axios.post('https://bytecar.herokuapp.com//api/v1/users', {
     username: userName,
   });
   const response = request.data;
