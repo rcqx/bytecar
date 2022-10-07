@@ -15,11 +15,11 @@ const CarDetails = () => {
           <div className="flex flex-col items-center md:flex md:flex-row md:items-start">
             <div className="">
               <h1 className="text-3xl font-bold">
-                {carDetailsParsed[0].brand}
+                {carDetailsParsed.brand}
                 {' '}
-                {carDetailsParsed[0].model}
+                {carDetailsParsed.model}
               </h1>
-              <img className="max-w-md" src={carDetailsParsed[0].image} alt={carDetailsParsed[0].model} />
+              <img className="max-w-md" src={carDetailsParsed.image} alt={carDetailsParsed.model} />
               <Link className="link-to-cars py-3" to="/cars">
                 DISCOVER MORE MODELS
               </Link>
@@ -31,27 +31,27 @@ const CarDetails = () => {
                     <th className="p-2">Finance fee</th>
                     <td>
                       $
-                      {carDetailsParsed[0].finance_fee}
+                      {carDetailsParsed.finance_fee}
                     </td>
                   </tr>
                   <tr>
                     <th className="p-2">Option to purchase fee</th>
                     <td>
                       $
-                      {carDetailsParsed[0].purchase_fee}
+                      {carDetailsParsed.purchase_fee}
                     </td>
                   </tr>
                   <tr>
                     <th className="p-2">Total ammount payable</th>
                     <td>
                       $
-                      {carDetailsParsed[0].tap}
+                      {carDetailsParsed.tap}
                     </td>
                   </tr>
                   <tr>
                     <th className="p-2">Duration</th>
                     <td>
-                      {carDetailsParsed[0].duration}
+                      {carDetailsParsed.duration}
                       {' months'}
                     </td>
                   </tr>
@@ -82,11 +82,11 @@ const CarDetails = () => {
         <div className="flex flex-col items-center md:flex md:flex-row md:items-start">
           <div className="">
             <h1 className="text-3xl font-bold">
-              {carDetailsParsed[0].brand}
+              {carDetailsParsed.brand}
               {' '}
-              {carDetailsParsed[0].model}
+              {carDetailsParsed.model}
             </h1>
-            <img className="w-5 h-5" src={carDetailsParsed[0].image} alt={carDetailsParsed[0].model} />
+            <img className="w-5 h-5" src={carDetailsParsed.image} alt={carDetailsParsed.model} />
             <Link className="link-to-cars py-3" to="/cars">
               DISCOVER MORE MODELS
             </Link>
@@ -98,27 +98,27 @@ const CarDetails = () => {
                   <th className="p-2">Finance fee</th>
                   <td>
                     $
-                    {carDetailsParsed[0].finance_fee}
+                    {carDetailsParsed.finance_fee}
                   </td>
                 </tr>
                 <tr>
                   <th className="p-2">Option to purchase fee</th>
                   <td>
                     $
-                    {carDetailsParsed[0].purchase_fee}
+                    {carDetailsParsed.purchase_fee}
                   </td>
                 </tr>
                 <tr>
                   <th className="p-2">Total ammount payable</th>
                   <td>
                     $
-                    {carDetailsParsed[0].tap}
+                    {carDetailsParsed.tap}
                   </td>
                 </tr>
                 <tr>
                   <th className="p-2">Duration</th>
                   <td>
-                    {carDetailsParsed[0].duration}
+                    {carDetailsParsed.duration}
                     {' months'}
                   </td>
                 </tr>

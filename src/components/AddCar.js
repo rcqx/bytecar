@@ -9,7 +9,7 @@ export default function AddCar() {
   const handleSubmit = (event) => {
     const brand = event.target.querySelector('#brand').value;
     const finance = event.target.querySelector('#finance_fee').value;
-    const image = event.target.querySelector('#car-image').files[0];
+    const image = event.target.querySelector('#car-image').value;
     const model = event.target.querySelector('#model').value;
     const purchase = event.target.querySelector('#purchase_fee').value;
     const tap = event.target.querySelector('#tap').value;
@@ -55,7 +55,7 @@ export default function AddCar() {
             <div>
               <label className="block text-gray-700 text-base font-bold mb-2" htmlFor="car-image">
                 Car Image
-                <input className="form-control block w-full text-base text-main" id="car-image" type="file" placeholder="Upload Car Image" accept="image/*" required />
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus: outline-main focus:placeholder:text-grey" id="car-image" type="text" placeholder="Upload Car Image" required />
               </label>
             </div>
           </div>
