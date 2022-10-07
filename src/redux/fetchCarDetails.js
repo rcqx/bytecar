@@ -2,7 +2,7 @@ const FETCH_DETAILS = 'fetchCarDetails/FETCH_DETAILS';
 const initialState = [];
 
 export const fetchCarDetails = (id) => async (dispatch) => {
-  const connect = await fetch(`https://bytecar.herokuapp.com/api/v1/cars/${id}`);
+  const connect = await fetch(`https://glacial-dawn-47690.herokuapp.com/api/v1/cars/${id}`);
   const res = await connect.json().then((data) => data);
   localStorage.setItem('carDetails', JSON.stringify(res));
   dispatch({

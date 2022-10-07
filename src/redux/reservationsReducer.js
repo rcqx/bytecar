@@ -17,7 +17,7 @@ export function fetchReservationsSuccess(data) {
 
 export const createReservation = (data, user) => async (dispatch) => {
   console.log(data);
-  const response = await request.post(`https://bytecar.herokuapp.com/api/v1/users/${user}/reservations`, data)
+  const response = await request.post(`https://glacial-dawn-47690.herokuapp.com/api/v1/users/${user}/reservations`, data)
     .then((res) => res.data)
     .catch((error) => error);
   dispatch({

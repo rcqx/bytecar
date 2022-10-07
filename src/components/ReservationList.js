@@ -12,7 +12,7 @@ const ReservationList = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   async function fetchData() {
-    await request.get('https://bytecar.herokuapp.com/api/v1/reservations').then((res) => {
+    await request.get('https://glacial-dawn-47690.herokuapp.com/api/v1/reservations').then((res) => {
       dispatch(fetchReservationsSuccess(res.data));
     });
   }

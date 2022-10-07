@@ -11,7 +11,7 @@ const ReservationCard = ({
   brand,
 }) => {
   async function deleteReservation(user, id) {
-    await request.delete(`https://bytecar.herokuapp.com/api/v1/users/${user}/reservations/${id}`).then((res) => {
+    await request.delete(`https://glacial-dawn-47690.herokuapp.com/api/v1/users/${user}/reservations/${id}`).then((res) => {
       console.log(res);
       const card = document.getElementById(id);
       card.remove();
