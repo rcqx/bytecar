@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family:
@@ -24,9 +28,4 @@ code {
     Consolas,
     'Courier New',
     monospace;
-}
-
-h1 {
-  font-size: 4em;
-  color: palevioletred;
 }
