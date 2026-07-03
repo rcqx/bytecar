@@ -84,11 +84,10 @@ This project was developed by a team of 5 people, you can check that out in our 
 - Twitter: [@HectorT](https://twitter.com/HectorT00406915)
 - LinkedIn: [@Hectorjte](https://www.linkedin.com/in/hectorjte/)
 
-### 👤 Fabiano Frank
+### 👤 Fabiano Magalhaes
 
-- GitHub: [@fabianofrank](https://github.com/fabianofrank)
-- Twitter: [@fabianofrankk](https://twitter.com/fabianofrankk)
-- LinkedIn: [@fabianofrank](https://www.linkedin.com/in/fabianofrank/)
+- GitHub: [@fabianomag](https://github.com/fabianomag)
+- LinkedIn: [@fabianomag](https://www.linkedin.com/in/fabianomag/)
 
 ## Contributing: 🤝
 
